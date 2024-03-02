@@ -1,0 +1,39 @@
+name: Plugin Request
+description: Submit a plugin request
+labels: ["available"]
+
+body:
+  - type: input
+    id: discord
+    attributes:
+      label: What's your Discord @username? (optional)
+      placeholder: Foobar#1234 or @foobar
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Plugin description
+      description: A short and simple description of your plugin request
+      placeholder: A plugin that spins your screen every minute
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Elaborate
+      description: Include some more details about your plugin request (optional)
+      placeholder: Every minute, your screen would do a barrel roll. There should also be settings for spin speed and how often the spin should happen
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Rules
+      description: Before submitting make sure to read the [README](https://github.com/Revenge-mod/plugin-requests#readme)
+      options:
+        - label: I have read the README and checked this wasn't already suggested
+          required: true
