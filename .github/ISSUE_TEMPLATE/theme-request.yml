@@ -1,6 +1,6 @@
-name: Plugin Request
-description: Submit a plugin request
-labels: ["available", "plugin"]
+name: Theme Request
+description: Submit a theme request
+labels: ["available", "theme"]
 
 body:
   - type: input
@@ -15,9 +15,9 @@ body:
   - type: textarea
     id: description
     attributes:
-      label: Plugin description
-      description: A short and simple description of your plugin request
-      placeholder: A plugin that ...
+      label: Theme description
+      description: A short and simple description of your theme request
+      placeholder: This theme should look like ...
     validations:
       required: true
 
@@ -25,10 +25,19 @@ body:
     id: details
     attributes:
       label: Elaborate
-      description: Include some more details about your plugin request (optional)
-      placeholder: This plugin should ...
+      description: Include some more details about your theme request (optional)
+      placeholder: This theme should use the font ...
     validations:
       required: false
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Some additional references for your theme request (optional)
+      placeholder: |
+        https://betterdiscord.app/theme/Frosted%20Glass
+        https://i.imgur.com/kYW2H5C.jpg
 
   - type: checkboxes
     id: rules
