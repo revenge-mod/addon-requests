@@ -1,0 +1,49 @@
+name: Plugin Port Request
+description: Submit a plugin port request (for unmaintained/broken plugins)
+labels: ["available", "plugin", "port"]
+
+body:
+  - type: input
+    id: discord
+    attributes:
+      label: Discord username
+      description: What's your Discord @username? (optional)
+      placeholder: Foobar#1234 or @foobar
+    validations:
+      required: false
+
+  - type: textarea
+    id: name
+    attributes:
+      label: Plugin name
+      description: The name of the plugin
+      placeholder: TokenStealer, BitcoinMiner, ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Plugin description
+      description: A short and simple description of the plugin
+      placeholder: A plugin that ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: link
+    attributes:
+      label: Plugin repository
+      description: The repository link for the plugin
+      placeholder: https://github.com/revenge-mod/plugins
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Rules
+      description: Before submitting make sure to read the [README](https://github.com/Revenge-mod/addon-requests#readme)
+      options:
+        - label: I have read the README and checked this wasn't already requested
+          required: true
